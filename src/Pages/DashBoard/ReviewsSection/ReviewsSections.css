@@ -1,0 +1,33 @@
+.form input{
+    width: 60%;
+    padding: 15px 10px;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 2px solid rgb(241, 232, 218);
+    background-color: rgb(241, 233, 233);
+    font-size: 16px;
+}
+
+.form .submitBtn{
+    background-color: rgb(153, 132, 78);
+    font-weight: bold;
+    color: wheat;
+    font-weight: bold;
+}
+
+.form2 input{
+    width: 90%;
+    padding: 15px 10px;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 2px solid rgb(241, 232, 218);
+    background-color: rgb(241, 233, 233);
+    font-size: 16px;
+}
+
+.form2 .submitBtn{
+    background-color: rgb(153, 132, 78);
+    font-weight: bold;
+    color: wheat;
+    font-weight: bold;
+}

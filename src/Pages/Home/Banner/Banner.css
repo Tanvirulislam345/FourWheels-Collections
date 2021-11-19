@@ -1,0 +1,9 @@
+.bannerStyle{
+    /* url("https://images.unsplash.com/photo-1486262743951-071f39e0cf4a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1248&q=80") */
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgba(107, 21, 21, 0.7)),
+    url("https://images.unsplash.com/photo-1486262743951-071f39e0cf4a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1248&q=80") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}

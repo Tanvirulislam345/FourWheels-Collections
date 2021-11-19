@@ -1,0 +1,13 @@
+.signUpStyle{
+    background: linear-gradient(rgba(0, 0, 0,0.6), rgba(0, 0, 0,0.6)),
+    url("https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+    height: 100vh;
+    background-attachment: fixed;
+}
