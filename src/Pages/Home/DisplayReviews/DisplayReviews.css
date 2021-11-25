@@ -22,20 +22,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 .manageAllOrder{
-    background: url("https://image.freepik.com/free-photo/old-vintage-car-parked-middle-freeway-road_181624-3286.jpg") ;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,0.7)), url("https://image.freepik.com/free-photo/old-vintage-car-parked-middle-freeway-road_181624-3286.jpg") ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 .myOrdersStyle{
-    background: url("https://image.freepik.com/free-photo/old-vintage-car-parked-middle-freeway-road_181624-3286.jpg") ;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0,0.7)), url("https://image.freepik.com/free-photo/old-vintage-car-parked-middle-freeway-road_181624-3286.jpg") ; */
+    background-color: #212F3D;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .addReview{
@@ -49,6 +53,7 @@
     align-items: center;
     padding: 5% 5%;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 .makeAdmin{
     background: linear-gradient(rgba(0, 0, 0,0.6), rgba(0, 0, 0,0.6)),
@@ -61,6 +66,7 @@
     align-items: center;
     padding: 12% 5%;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 .addProduct{
     background: linear-gradient(rgba(0, 0, 0,0.6), rgba(0, 0, 0,0.6)),
@@ -74,4 +80,5 @@
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
+    min-height: 100vh;
 }

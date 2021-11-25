@@ -1,4 +1,12 @@
 .list .listItem:hover{
-    background-color: rgb(243, 197, 136);
-    color: white;
+    background-color: rgb(53, 30, 30);
+}
+
+.list .listItem{
+    /* background-color: rgb(243, 197, 136); */
+    color: #F2D7D5;
+}
+.list .dashbordIcon{
+    /* color: #66686b; */
+    color: #F2D7D5;
 }

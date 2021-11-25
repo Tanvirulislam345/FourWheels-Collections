@@ -3,7 +3,6 @@ import {
     AppBar,
     Toolbar,
     CssBaseline,
-    Typography,
     useTheme,
     useMediaQuery,
     Container,
@@ -17,7 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Box } from '@mui/system';
 import useAuth from '../../../hooks/useAuth';
 import NavMenu from '../NavMenu/NavMenu';
-import logo2 from '../../../images/icon/logo1.png';
+import logo1 from '../../../images/icon/logo6.png';
 
 const Navigation = () => {
     const { user } = useAuth();
@@ -33,7 +32,7 @@ const Navigation = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
-        <AppBar position="static" style={{ backgroundColor: '#212F3D ' }}>
+        <AppBar position="static" style={{ backgroundColor: '#212F3D' }}>
             <Container>
                 <CssBaseline />
                 <Toolbar>
@@ -81,16 +80,10 @@ const Navigation = () => {
                         {/* <Typography variant="h4" sx={{ fontWeight: 'bold', mr: 'auto' }}>
                             FourWheel
                         </Typography> */}
-                        <img src={logo2} alt="" style={{ marginRight: 'auto' }} width="90px" />
+                        <img src={logo1} alt="" style={{ marginRight: 'auto' }} width="90px" />
                         {
                             user?.email ?
-
                                 <NavMenu></NavMenu>
-                                // <Button color="inherit"
-                                //     onClick={userSignOut}
-                                // >
-                                //     {user.displayName}
-                                // </Button>
 
                                 :
                                 <Link to="/signin" style={{ paddingLeft: '20px', textDecoration: 'none', color: 'white', fontWeight: 'bold' }}>
@@ -99,7 +92,7 @@ const Navigation = () => {
                         }
                     </>
                         : <>
-                            <img src={logo2} alt="" style={{ marginRight: 'auto', backgroundColor: 'white' }} height="62px" width="130px" />
+                            <img src={logo1} alt="" style={{ marginRight: 'auto' }} height="65px" width="170px" />
 
                             <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>
                                 <Button color="inherit">Home</Button>
@@ -116,13 +109,6 @@ const Navigation = () => {
 
                             {
                                 user?.email ?
-                                    // <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>
-                                    //     <Button color="inherit"
-                                    //         onClick={userSignOut}
-                                    //     >
-                                    //         {user.displayName}
-                                    //     </Button>
-                                    // </Link>
                                     <NavMenu></NavMenu>
 
                                     :

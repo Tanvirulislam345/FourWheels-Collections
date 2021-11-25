@@ -33,13 +33,10 @@ const MyOrders = () => {
     }
     return (
         <Box className="myOrdersStyle">
-            <Container className="App" sx={{ flexGrow: 1, py: 5 }} >
-                <Typography variant="h4" gutterBottom component="div" sx={{ fontWeight: 'bold', my: 2 }}>
-                    My <span style={{ color: 'red' }}>Orders</span>
-                </Typography>
+            <Container className="App" sx={{ flexGrow: 1, py: 3 }} >
                 {
                     orders.map(order => (
-                        <Card sx={{ p: 2, mb: 3, borderRadius: 5 }}
+                        <Card sx={{ mb: 3, borderRadius: 5 }}
                             key={order._id}
                         >
                             <Grid container spacing={{ xs: 2, md: 3 }}>
@@ -51,8 +48,8 @@ const MyOrders = () => {
                                         alt="green iguana"
                                     />
                                 </Grid>
-                                <Grid item xs={12} sm={12} md={6}>
-                                    <Paper elevation={3} sx={{ mb: 3, borderRadius: 5 }}>
+                                <Grid item xs={12} sm={12} md={6} sx={{ mb: 2 }}>
+                                    <Paper elevation={3} sx={{ m: 3, ml: 0, borderRadius: 5 }}>
                                         <TableRow>
                                             <TableCell sx={{ fontWeight: 'bold', border: 'none' }}>Model </TableCell>
                                             <TableCell sx={{ fontWeight: 'bold', border: 'none', color: 'gray' }}>{order.model}</TableCell>

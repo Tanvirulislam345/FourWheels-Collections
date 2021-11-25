@@ -15,9 +15,6 @@ const Banner = () => {
             color: 'white',
             width: '100%'
         }}>
-            <Typography variant="body1" gutterBottom component="div">
-                Fillup your dream
-            </Typography>
             <Typography variant="h3" gutterBottom component="div" sx={{ fontWeight: 'bold' }}>
                 Buying a new Car
             </Typography>
@@ -26,7 +23,7 @@ const Banner = () => {
             </Typography>
             <Box>
                 <Link to="/signup" style={{ textDecoration: 'none', }}>
-                    <Button variant="contained" sx={{ m: 2, px: 4, py: 1, backgroundColor: 'red' }}>SignUp</Button>
+                    <Button variant="contained" sx={{ m: 2, px: 4, py: 1, backgroundColor: 'green' }}>SignUp</Button>
                 </Link>
                 <Link to="/collections" style={{ textDecoration: 'none', }}>
                     <Button variant="contained" sx={{ m: 2, px: 4, py: 1, }}>Buy Now</Button>

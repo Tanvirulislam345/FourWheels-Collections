@@ -1,4 +1,4 @@
-import { Box, Button, Card, Container, Grid, Paper, TableCell, TableRow, Typography } from '@mui/material';
+import { Box, Button, Container, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 const ManageAllOrders = () => {
@@ -45,70 +45,58 @@ const ManageAllOrders = () => {
     }
     return (
         <Box className="manageAllOrder">
-            <Container className="App" sx={{ flexGrow: 1, py: 5 }} >
-                <Typography variant="h4" gutterBottom component="div" sx={{ fontWeight: 'bold', my: 2 }}>
-                    Manage All <span style={{ color: 'red' }}>Orders</span>
-                </Typography>
-                <Grid container spacing={{ xs: 2, md: 3 }}>
-                    {
-                        orders.map(order => (
-                            <Grid item xs={12} sm={6} md={4}
-                                key={order._id}
-                            >
-                                <Card sx={{ pb: 3, borderRadius: 5 }}>
-                                    <Paper elevation={3} sx={{ mb: 3, borderRadius: 5 }}>
-                                        <TableRow>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none' }}>Model </TableCell>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none', color: 'gray' }}>{order.model}</TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none' }}>price </TableCell>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none', color: 'gray' }}>{order.price}</TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none' }}>User :</TableCell>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none', color: 'gray' }}>{order.userName}</TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none' }}>Email :</TableCell>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none', color: 'gray' }}>{order.email}</TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none' }}>Phone :</TableCell>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none', color: 'gray' }}>{order.phone}</TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none' }}>Status</TableCell>
-                                            <TableCell sx={{ fontWeight: 'bold', border: 'none', color: 'orange' }}>{order.status}</TableCell>
-                                        </TableRow>
-
-                                    </Paper>
-
-                                    <TableRow sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
-
-                                        <Paper elevation={3}
+            <Container sx={{ py: 3 }}>
+                <TableContainer component={Paper} sx={{ p: 2, backgroundColor: '#212F3D' }}>
+                    <Table sx={{ minWidth: 700 }} aria-label="spanning table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Name</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Email</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Phone</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Model</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Price</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Status</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Approved</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Cancel</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {orders.map((order) => (
+                                <TableRow>
+                                    {/* <TableCell>Desc</TableCell> */}
+                                    <TableCell sx={{ color: 'gray' }}>{order.userName}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{order.email}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{order.phone}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{order.model}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{order.price}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{order.status}</TableCell>
+                                    <TableCell>
+                                        {/* <Paper elevation={3}
                                             sx={{ borderRadius: 5, backgroundColor: 'green' }}
                                             onClick={() => handleUpdate(order._id)}
                                         >
                                             <Button sx={{ fontWeight: 'bold', border: 'none', p: 1, px: 3, color: 'white' }}>Approved</Button>
-                                        </Paper>
-                                        <Paper elevation={3}
-                                            sx={{ borderRadius: 5, backgroundColor: 'red' }}
+                                        </Paper> */}
+                                        <Button variant="contained"
+                                            onClick={() => handleUpdate(order._id)}
+                                            sx={{ width: '100%', mt: 3, borderRadius: 5, backgroundColor: '#33333A' }}>
+                                            approve
+                                        </Button>
+                                    </TableCell>
+                                    <TableCell align="right">
+                                        <Button variant="contained"
                                             onClick={() => handleDelete(order._id)}
-                                        >
-                                            <Button sx={{ fontWeight: 'bold', border: 'none', p: 1, px: 3, color: 'white' }}>Cencel</Button>
-                                        </Paper>
-                                    </TableRow>
-                                </Card>
-                            </Grid>
+                                            sx={{ width: '100%', mt: 3, borderRadius: 5, backgroundColor: '#33333A' }}>
+                                            cancel
+                                        </Button>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
 
-
-                        ))
-                    }
-                </Grid>
-            </Container >
-
-
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Container>
         </Box>
 
     );

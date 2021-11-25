@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import { Button, Box, Container, Rating } from '@mui/material';
+import { Button, Box, Container, Rating, TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
 
 const ManageProduct = () => {
     const [collections, setCollections] = useState([]);
@@ -37,52 +37,43 @@ const ManageProduct = () => {
     }
     return (
         <Box className="manageProduct">
-            <Container sx={{ flexGrow: 1 }} >
-                <Typography className="App" variant="h4" gutterBottom component="div" sx={{ fontWeight: 'bold', py: 5, color: 'white' }}>
-                    FourWheel  <span style={{ color: 'red' }}>ManageProduct</span>
-                </Typography>
+            <Container sx={{ flexGrow: 1, py: 2 }} >
+                <TableContainer component={Paper} sx={{ p: 2, backgroundColor: '#212F3D' }}>
+                    <Table sx={{ minWidth: 700 }} aria-label="spanning table">
+                        <TableHead>
+                            <TableRow>
 
-                <Grid container spacing={{ xs: 2, md: 3 }} sx={{ p: 2, mb: 3, borderRadius: 5 }}>
-                    {
-                        collections.map(collection => (
-                            <Grid item xs={12} sm={6} md={4}
-                                key={collection._id}
-                            >
-                                <Paper elevation={3} sx={{ p: 1, borderRadius: 5 }}>
-                                    <CardMedia
-                                        component="img"
-                                        sx={{ width: '100%', height: '150px', borderRadius: 5 }}
-                                        image={collection.image}
-                                        alt="green iguana"
-                                    />
-                                    <Box className="App"
-                                        sx={{ my: 1 }}>
-                                        <Rating
-                                            name="half-rating-read"
-                                            defaultValue={4}
-                                            precision={0.5}
-                                            readOnly />
-                                    </Box>
+                                <TableCell sx={{ color: '#F2D7D5' }}>Model</TableCell>
+                                <TableCell sx={{ color: '#F2D7D5' }}>Price</TableCell>
+                                <TableCell sx={{ color: '#F2D7D5' }}>Top Spreed</TableCell>
+                                <TableCell sx={{ color: '#F2D7D5' }}>Body</TableCell>
+                                <TableCell sx={{ color: '#F2D7D5' }}>Size</TableCell>
+                                <TableCell align="center" sx={{ color: '#F2D7D5' }}>Delete</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {collections.map((collection) => (
+                                <TableRow>
+                                    <TableCell sx={{ color: 'gray' }}>{collection.model}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{collection.price}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{collection.topspreed}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{collection.bodystyle}</TableCell>
+                                    <TableCell sx={{ color: 'gray' }}>{collection.size}</TableCell>
+                                    <TableCell>
+                                        <Button variant="contained"
+                                            onClick={() => handleDelete(collection._id)}
+                                            sx={{ width: '100%', mt: 3, borderRadius: 5, backgroundColor: '#33333A' }}>
+                                            delete
+                                        </Button>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
 
-                                    <Typography variant="h6"
-                                        sx={{ fontWeight: 'bold', color: 'red', my: 1 }}>
-                                        {collection.model}
-                                    </Typography>
-                                    <Typography variant="body1"
-                                        sx={{ fontWeight: 'bold' }}>
-                                        Price : <small>{collection.price}</small>
-                                    </Typography>
+                        </TableBody>
+                    </Table>
+                </TableContainer>
 
-                                    <Button variant="contained"
-                                        onClick={() => handleDelete(collection._id)}
-                                        sx={{ width: '100%', mt: 3, borderRadius: 5, backgroundColor: '#33333A' }}>
-                                        delete
-                                    </Button>
 
-                                </Paper>
-                            </Grid>
-                        ))}
-                </Grid>
 
             </Container>
         </Box>

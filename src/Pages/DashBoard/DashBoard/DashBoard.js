@@ -50,14 +50,14 @@ const DashBoard = (props) => {
     };
 
     const drawer = (
-        <Box sx={{ backgroundColor: '#D2D2D7', height: '100vh' }}>
+        <Box sx={{ backgroundColor: '#212F3D', height: '100vh' }}>
             <Toolbar />
             <List className="list">
                 <ListItemButton className="listItem">
-                    <ListItemIcon>
+                    <ListItemIcon className="dashbordIcon">
                         <HomeIcon />
                     </ListItemIcon>
-                    <Link to='/home' style={{ textDecoration: 'none', color: 'black' }}>
+                    <Link to='/home' style={{ textDecoration: 'none', color: 'gray' }}>
                         <ListItemText primary="Home" />
                     </Link>
                 </ListItemButton>
@@ -65,7 +65,7 @@ const DashBoard = (props) => {
 
                 <Link to={`${url}`} style={{ textDecoration: 'none', color: 'black' }}>
                     <ListItemButton className="listItem">
-                        <ListItemIcon>
+                        <ListItemIcon className="dashbordIcon">
                             <LocalGroceryStoreIcon />
                         </ListItemIcon>
                         <ListItemText primary="My orders" />
@@ -74,20 +74,20 @@ const DashBoard = (props) => {
 
                 <Link to={`${url}/reviews`} style={{ textDecoration: 'none', color: 'black' }}>
                     <ListItemButton className="listItem">
-                        <ListItemIcon>
+                        <ListItemIcon className="dashbordIcon">
                             <FourKPlusIcon />
                         </ListItemIcon>
                         <ListItemText primary="Add Reviews" />
                     </ListItemButton>
                 </Link>
-                <Link to={`${url}/payment`} style={{ textDecoration: 'none', color: 'black' }}>
+                {/* <Link to={`${url}/payment`} style={{ textDecoration: 'none', color: 'black' }}>
                     <ListItemButton className="listItem">
-                        <ListItemIcon>
+                        <ListItemIcon className="dashbordIcon">
                             <PaidIcon />
                         </ListItemIcon>
                         <ListItemText primary="Payment" />
                     </ListItemButton>
-                </Link>
+                </Link> */}
                 <Divider />
 
                 {
@@ -95,7 +95,7 @@ const DashBoard = (props) => {
                     <Box>
                         <Link to={`${url}/makeAdmin`} style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItemButton className="listItem">
-                                <ListItemIcon>
+                                <ListItemIcon className="dashbordIcon">
                                     <PersonAddAlt1Icon />
                                 </ListItemIcon>
                                 <ListItemText primary="Make A Admin" />
@@ -104,7 +104,7 @@ const DashBoard = (props) => {
 
                         <Link to={`${url}/addProducts`} style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItemButton className="listItem">
-                                <ListItemIcon>
+                                <ListItemIcon className="dashbordIcon">
                                     <AddShoppingCartIcon />
                                 </ListItemIcon>
                                 <ListItemText primary="Add Products" />
@@ -112,7 +112,7 @@ const DashBoard = (props) => {
                         </Link>
                         <Link to={`${url}/manageOrders`} style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItemButton className="listItem">
-                                <ListItemIcon>
+                                <ListItemIcon className="dashbordIcon">
                                     <MenuBookIcon />
                                 </ListItemIcon>
                                 <ListItemText primary="ManageOrders" />
@@ -120,7 +120,7 @@ const DashBoard = (props) => {
                         </Link>
                         <Link to={`${url}/manageProducts`} style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItemButton className="listItem">
-                                <ListItemIcon>
+                                <ListItemIcon className="dashbordIcon">
                                     <MenuBookIcon />
                                 </ListItemIcon>
                                 <ListItemText primary="ManageProducts" />
@@ -130,7 +130,7 @@ const DashBoard = (props) => {
                 <Divider />
                 <Link to='/home' style={{ textDecoration: 'none', color: 'black' }}>
                     <ListItemButton onClick={userSignOut} className="listItem">
-                        <ListItemIcon>
+                        <ListItemIcon className="dashbordIcon">
                             <Logout fontSize="small" />
                         </ListItemIcon>
                         <ListItemText primary="Log Out" />
@@ -151,7 +151,7 @@ const DashBoard = (props) => {
                     ml: { sm: `${drawerWidth}px` },
                 }}
             >
-                <Toolbar>
+                <Toolbar sx={{ backgroundColor: '#212F3D' }}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
