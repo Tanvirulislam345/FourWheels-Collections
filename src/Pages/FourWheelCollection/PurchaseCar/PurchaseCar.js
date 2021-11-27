@@ -71,7 +71,7 @@ const PurchaseCar = () => {
                                         <input {...register("userName")} required
                                             defaultValue={user.displayName} /> <br />
                                         <input type="number" {...register("phone")} required
-                                            defaultValue="017" /> <br />
+                                            defaultValue="017..." /> <br />
                                         <input type="submit" className="submitBtn" />
                                     </Grid>
                                 </Grid>
