@@ -23,7 +23,7 @@ const Banner = () => {
             </Typography>
             <Box>
                 <Link to="/signup" style={{ textDecoration: 'none', }}>
-                    <Button variant="contained" sx={{ m: 2, px: 4, py: 1, backgroundColor: 'green' }}>SignUp</Button>
+                    <Button variant="contained" sx={{ m: 2, px: 4, py: 1, backgroundColor: '#FA9779' }}>SignUp</Button>
                 </Link>
                 <Link to="/collections" style={{ textDecoration: 'none', }}>
                     <Button variant="contained" sx={{ m: 2, px: 4, py: 1, }}>Buy Now</Button>

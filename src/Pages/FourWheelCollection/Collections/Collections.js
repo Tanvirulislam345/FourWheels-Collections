@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { Box, Button, Container, CardContent, CardActions, Card } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+//#212F3D
 
 const Collections = () => {
     const [collections, setCollections] = useState([]);
@@ -16,11 +17,11 @@ const Collections = () => {
     }, []);
 
     return (
-        <Box sx={{ backgroundColor: '#E5E8E8' }}>
+        <Box sx={{ backgroundColor: '#273746' }}>
             <Container className="App" sx={{ flexGrow: 1 }} >
 
-                <Typography variant="h4" gutterBottom component="div" sx={{ fontWeight: 'bold', pt: 5 }}>
-                    FourWheel <span style={{ color: 'red' }}>Collection</span>
+                <Typography variant="h4" gutterBottom component="div" sx={{ fontWeight: 'bold', pt: 5, color: 'white' }}>
+                    FourWheel <span style={{ color: '#FA9779' }}>Collection</span>
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3 }} sx={{ py: 2 }}>
                     {
@@ -28,7 +29,7 @@ const Collections = () => {
                             <Grid item xs={12} sm={6} md={4}
                                 key={collection._id}
                             >
-                                <Card sx={{ borderRadius: 5 }}>
+                                <Card sx={{ borderRadius: 5, backgroundColor: '#212F3D' }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                                         <CardMedia
                                             component="img"
@@ -38,10 +39,10 @@ const Collections = () => {
                                         />
                                     </Box>
                                     <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold', color: 'red' }}>
+                                        <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold', color: 'white' }}>
                                             {collection.model}
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'justify' }}>
+                                        <Typography variant="body2" color="gray" sx={{ textAlign: 'justify' }}>
                                             {collection.description.slice(0, 200)}
                                         </Typography>
                                     </CardContent>

@@ -9,6 +9,18 @@
     padding: 10% 0;
 }
 
+.upcomingStyle{
+    background: linear-gradient(rgba(182, 127, 127, 0.8), rgba(0, 0, 0,0.8)),url("https://images.pexels.com/photos/626155/pexels-photo-626155.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+}
+
+
 .collectionStyle{
     background: url("https://image.freepik.com/free-photo/old-vintage-car-parked-middle-freeway-road_181624-3286.jpg") ;
     background-position: center;

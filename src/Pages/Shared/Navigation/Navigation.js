@@ -7,7 +7,8 @@ import {
     useMediaQuery,
     Container,
     IconButton,
-    Button
+    Button,
+    Typography
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import Menu from '@mui/material/Menu';
@@ -80,7 +81,9 @@ const Navigation = () => {
                         {/* <Typography variant="h4" sx={{ fontWeight: 'bold', mr: 'auto' }}>
                             FourWheel
                         </Typography> */}
-                        <img src={logo1} alt="" style={{ marginRight: 'auto' }} width="90px" />
+                        <Typography variant="h5" gutterBottom component="div" sx={{ fontWeight: 'bold', color: 'white', marginRight: 'auto' }}>
+                            FourWheels
+                        </Typography>
                         {
                             user?.email ?
                                 <NavMenu></NavMenu>
@@ -92,7 +95,9 @@ const Navigation = () => {
                         }
                     </>
                         : <>
-                            <img src={logo1} alt="" style={{ marginRight: 'auto' }} height="65px" width="170px" />
+                            <Typography variant="h5" gutterBottom component="div" sx={{ fontWeight: 'bold', color: 'white', marginRight: 'auto' }}>
+                                FourWheels
+                            </Typography>
 
                             <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>
                                 <Button color="inherit">Home</Button>

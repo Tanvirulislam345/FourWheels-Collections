@@ -28,7 +28,7 @@ import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import HomeIcon from '@mui/icons-material/Home';
 import FourKPlusIcon from '@mui/icons-material/FourKPlus';
-import PaidIcon from '@mui/icons-material/Paid';
+import ShopIcon from '@mui/icons-material/Shop';
 import AddProducts from "../AddProducts/AddProducts";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import useAuth from '../../../hooks/useAuth';
@@ -121,7 +121,7 @@ const DashBoard = (props) => {
                         <Link to={`${url}/manageProducts`} style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItemButton className="listItem">
                                 <ListItemIcon className="dashbordIcon">
-                                    <MenuBookIcon />
+                                    <ShopIcon />
                                 </ListItemIcon>
                                 <ListItemText primary="ManageProducts" />
                             </ListItemButton>

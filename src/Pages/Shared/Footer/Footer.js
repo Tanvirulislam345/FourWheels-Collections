@@ -9,11 +9,11 @@ import image3 from '../../../images/icon/images3.png';
 const Footer = () => {
     /*  backgroundColor: '#F63E7B' 2DF3F3 B1FAA7    D6D8D8*/
     return (
-        <Box sx={{ flexGrow: 1, backgroundColor: '#D0D3D4', color: 'white' }}>
+        <Box sx={{ flexGrow: 1, backgroundColor: '#212F3C', color: 'white' }}>
             <Container>
                 <Grid container spacing={2} sx={{ py: 5 }}>
                     <Grid item xs={12} md={4}>
-                        <Typography variant="h5" gutterBottom component="div" sx={{ fontWeight: 'bold', color: 'black' }}>
+                        <Typography variant="h5" gutterBottom component="div" sx={{ fontWeight: 'bold', color: '#DBDDE0' }}>
                             FourWhile
                         </Typography>
                         <Typography variant="subtitle2" gutterBottom component="div" sx={{ fontWeight: 'bold', color: 'gray', my: 1 }}>
@@ -26,7 +26,7 @@ const Footer = () => {
                         <img src={playstore1} alt="" width="50%" />
                     </Grid>
                     <Grid item xs={6} md={2}>
-                        <Typography variant="h6" gutterBottom component="div" sx={{ fontWeight: 'bold', color: 'black' }}>
+                        <Typography variant="h6" gutterBottom component="div" sx={{ fontWeight: 'bold', color: '#DBDDE0' }}>
                             Company
                         </Typography>
                         <p style={{ color: 'gray' }}>About</p>
@@ -36,7 +36,7 @@ const Footer = () => {
                         <p style={{ color: 'gray' }}>Submit Listing</p>
                     </Grid>
                     <Grid item xs={6} md={2}>
-                        <Typography variant="h6" gutterBottom component="div" sx={{ fontWeight: 'bold', color: 'black' }}>
+                        <Typography variant="h6" gutterBottom component="div" sx={{ fontWeight: 'bold', color: '#DBDDE0' }}>
                             Quick links
                         </Typography>
                         <p style={{ color: 'gray' }}>Home</p>

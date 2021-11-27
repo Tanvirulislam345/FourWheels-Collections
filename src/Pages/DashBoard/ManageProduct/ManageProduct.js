@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Grid from '@mui/material/Grid';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import { Button, Box, Container, Rating, TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
+import { Button, Box, Container, TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
 
 const ManageProduct = () => {
     const [collections, setCollections] = useState([]);
@@ -42,7 +39,6 @@ const ManageProduct = () => {
                     <Table sx={{ minWidth: 700 }} aria-label="spanning table">
                         <TableHead>
                             <TableRow>
-
                                 <TableCell sx={{ color: '#F2D7D5' }}>Model</TableCell>
                                 <TableCell sx={{ color: '#F2D7D5' }}>Price</TableCell>
                                 <TableCell sx={{ color: '#F2D7D5' }}>Top Spreed</TableCell>
@@ -62,7 +58,7 @@ const ManageProduct = () => {
                                     <TableCell>
                                         <Button variant="contained"
                                             onClick={() => handleDelete(collection._id)}
-                                            sx={{ width: '100%', mt: 3, borderRadius: 5, backgroundColor: '#33333A' }}>
+                                            sx={{ width: '100%', borderRadius: 5, backgroundColor: '#33333A' }}>
                                             delete
                                         </Button>
                                     </TableCell>

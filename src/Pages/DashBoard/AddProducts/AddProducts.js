@@ -19,7 +19,7 @@ const AddProducts = () => {
         <Paper elevation={3} sx={{ flexGrow: 1 }} className="addProduct">
             <Grid item xs={12} sm={12} md={7}>
                 <Box sx={{ py: 5 }} className="App form">
-                    <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', color: 'white' }}>
+                    <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', color: '#808B96' }}>
                         Add a new Product
                     </Typography>
                     <form onSubmit={handleSubmit(onSubmit)}>

@@ -8,7 +8,9 @@ import Primium from '../Premium/Premium';
 const UpComming = () => {
 
     return (
-        <Box sx={{ flexGrow: 1, py: 5, backgroundColor: '#FBEEE6' }}>
+        <Box sx={{ flexGrow: 1, py: 5, backgroundColor: '#FBEEE6' }}
+            className="upcomingStyle"
+        >
             <Container>
                 <Grid container>
                     <Grid item sm={12} md={6}>
@@ -16,13 +18,13 @@ const UpComming = () => {
                     </Grid>
                     <Grid item sm={12} md={6} sx={{ my: 'auto', display: 'flex', justifyContent: 'center' }}>
                         <Box sx={{ width: '400px' }}>
-                            <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
+                            <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'white' }}>
                                 Our <span style={{ color: 'red' }}>UpComming Cars </span> <br /> Launch Tommorow
                             </Typography>
-                            <Typography color="text.secondary" sx={{ my: 3, width: '85%' }}>
+                            <Typography sx={{ my: 3, width: '85%', color: 'gray' }}>
                                 It's like driving a car at night. You never see further than your headlights, but you can make the whole trip that way.
                             </Typography>
-                            <Button variant="contained" sx={{ mb: 5 }}>Get Offer</Button>
+                            <Button variant="contained" sx={{ mb: 5, backgroundColor: 'teal' }}>Get Offer</Button>
                         </Box>
                     </Grid>
                 </Grid>

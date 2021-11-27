@@ -79,14 +79,14 @@ const ManageAllOrders = () => {
                                         </Paper> */}
                                         <Button variant="contained"
                                             onClick={() => handleUpdate(order._id)}
-                                            sx={{ width: '100%', mt: 3, borderRadius: 5, backgroundColor: '#33333A' }}>
+                                            sx={{ width: '100%', borderRadius: 5, backgroundColor: '#33333A', color: 'green' }}>
                                             approve
                                         </Button>
                                     </TableCell>
                                     <TableCell align="right">
                                         <Button variant="contained"
                                             onClick={() => handleDelete(order._id)}
-                                            sx={{ width: '100%', mt: 3, borderRadius: 5, backgroundColor: '#33333A' }}>
+                                            sx={{ width: '100%', borderRadius: 5, backgroundColor: '#33333A', color: 'red' }}>
                                             cancel
                                         </Button>
                                     </TableCell>
