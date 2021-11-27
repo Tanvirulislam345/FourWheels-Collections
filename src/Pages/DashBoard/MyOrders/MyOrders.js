@@ -1,4 +1,4 @@
-import { Card, CardMedia, Container, Grid, Paper, TableCell, TableRow, Typography, Box } from '@mui/material';
+import { Card, CardMedia, Container, Grid, Paper, TableCell, TableRow, Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 

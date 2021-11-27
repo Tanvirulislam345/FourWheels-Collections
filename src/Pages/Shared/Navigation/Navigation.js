@@ -17,7 +17,6 @@ import MenuItem from '@mui/material/MenuItem';
 import { Box } from '@mui/system';
 import useAuth from '../../../hooks/useAuth';
 import NavMenu from '../NavMenu/NavMenu';
-import logo1 from '../../../images/icon/logo6.png';
 
 const Navigation = () => {
     const { user } = useAuth();
@@ -78,9 +77,7 @@ const Navigation = () => {
                                 }
                             </Menu>
                         </Box>
-                        {/* <Typography variant="h4" sx={{ fontWeight: 'bold', mr: 'auto' }}>
-                            FourWheel
-                        </Typography> */}
+
                         <Typography variant="h5" gutterBottom component="div" sx={{ fontWeight: 'bold', color: 'white', marginRight: 'auto' }}>
                             FourWheels
                         </Typography>
